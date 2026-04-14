@@ -1,0 +1,81 @@
+# Project One: Account Modification Form
+**CYB-230 | Operating System Security | Grade: A**
+
+## Objective
+Process a formal access change request for user "Pat" across multiple systems — implementing the standard IT security workflow for access provisioning and deprovisioning using an Account Modification Form.
+
+---
+
+## What Is an Account Modification Form?
+An Account Modification Form is the formal documentation used by IT security teams to track, approve, and verify changes to user access. It records:
+- The system being modified
+- The user's current permissions
+- The manager-approved change
+- Verification that the change was implemented correctly
+
+This process ensures access changes are **authorized, documented, and auditable** — a core requirement in any security-conscious organization.
+
+---
+
+## Access Changes Implemented
+
+### 1. Finance System — Access Removal
+| Field | Detail |
+|---|---|
+| Current Permissions | Full control, Modify, Read & Execute, List Folder Contents, Read, Write |
+| Approved Change | Remove Pat from all access |
+| Reason | Role change — Pat no longer works in Finance |
+
+**Implementation:** Removed Pat's account from all Finance system permission groups. Verified removal by confirming Pat could no longer access Finance resources.
+
+**Security principle:** **Least Privilege / Need to Know** — access that is no longer needed must be revoked immediately. Stale access is one of the most common attack vectors, especially in insider threat scenarios.
+
+---
+
+### 2. Human Resources System — Access Grant
+| Field | Detail |
+|---|---|
+| Current Permissions | None |
+| Approved Change | Grant full access: Full control, Modify, Read & Execute, List Folder Contents, Read, Write |
+| Reason | Pat has transferred to HR and requires full access to perform their new role |
+
+**Implementation:** Added Pat's account to the HR permission group with all required access levels. Verified by confirming Pat could access, modify, and manage HR resources.
+
+---
+
+### 3. GPO — Password Policy Update
+| Field | Detail |
+|---|---|
+| Current Setting | Default user password policy |
+| Approved Change | Update to meet admin requirements |
+
+**Implementation:** Updated the Group Policy Object (GPO) password policy to enforce admin-level requirements (complexity, length, expiration). Applied the policy and forced a Group Policy update.
+
+---
+
+### 4. GPO — Password Policy Verification
+| Field | Detail |
+|---|---|
+| Action | Test Pat's account for logon error after password policy update |
+
+**Implementation:** Attempted to log in with Pat's existing password after the new GPO was applied. Confirmed that the system correctly rejected the old password and prompted for a policy-compliant update — verifying the GPO was enforced.
+
+---
+
+### 5. Linux Server — HR Admin User Creation
+| Field | Detail |
+|---|---|
+| Current Access | None |
+| Approved Change | Create HR admin user account for Pat on Linux server |
+
+**Implementation:** Created a new user account for Pat on the Linux server with HR admin privileges. Verified user creation using `cat /etc/passwd`.
+
+---
+
+## Key Takeaway
+The Account Modification Form workflow is a fundamental security control. Without it, access changes can be made without authorization, go undocumented, or never get verified — creating audit gaps and potential compliance violations. This project gave me direct experience with the end-to-end access management process used in real IT security operations.
+
+---
+
+## Skills Demonstrated
+`Access Provisioning & Deprovisioning` `Least Privilege` `Windows File Permissions` `Group Policy (GPO)` `Password Policy Enforcement` `Linux User Creation` `Access Audit Verification` `Security Documentation`
