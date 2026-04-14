@@ -1,0 +1,54 @@
+# Module Two Labs: Ubuntu Installation, Patching & Firewall
+**CYB-230 | Operating System Security**
+
+## Lab 1: Ubuntu Desktop Linux Installation
+
+**Task:** Install Ubuntu Linux using a custom hard disk layout and create a user account during setup.
+
+**Steps completed:**
+- Booted into Ubuntu installer and selected custom hard disk layout
+- Configured partition scheme manually
+- Created user account (Livia Ward) during installation setup
+- Completed installation and booted into the new system
+
+**Key question: Why is keeping an OS patched and up-to-date important?**
+
+Keeping an operating system updated is critical for security and performance. Updates fix known security vulnerabilities before attackers can exploit them, protect against newly discovered threats, patch bugs that could cause instability, and often include performance improvements. An unpatched OS is one of the most common and preventable attack vectors.
+
+---
+
+## Lab 2: Disk Maintenance & Data Recovery
+
+**Task:** Perform backup and restore operations and explain the value of restore points.
+
+**Steps completed:**
+- Performed a full data backup
+- Executed a restore from the backup
+- Verified data integrity after restore
+
+**Key question: How can the restore point utility help with rebuilding and testing PCs?**
+
+The restore point utility allows technicians to quickly return a PC to a specific working state without a full reinstall. This is valuable for:
+- Testing system updates or configuration changes safely — if something breaks, roll back instantly
+- Recovering from malware infections that haven't reached the restore point date
+- Standardizing PC setups across multiple machines — clone a known-good state and restore it to many systems
+- Reducing downtime during incident response
+
+---
+
+## Lab 3: Patching, Securing & Host-Based Firewall
+
+**Task:** Close unnecessary open ports using command-line tools and configure a host-based firewall.
+
+**Steps completed:**
+- Identified open ports using network scanning tools
+- Closed unnecessary ports via command-line configuration
+- Configured host-based firewall rules to block unwanted traffic
+- Verified port closure by rescanning
+
+**Security principle:** Every open port is a potential attack surface. Closing unnecessary ports follows the **Minimize Attack Surface** security design principle — if a service isn't needed, it shouldn't be running or accessible.
+
+---
+
+## Skills Demonstrated
+`Ubuntu Linux Installation` `Custom Disk Partitioning` `OS Patch Management` `Data Backup & Restore` `Restore Points` `Port Scanning` `Port Closure` `Host-Based Firewall` `Attack Surface Reduction`
